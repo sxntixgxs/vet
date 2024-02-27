@@ -36,6 +36,10 @@ searchSend.addEventListener('click',async()=>{
             } else {
                 querySnapshot.forEach((doc)=>{
                     console.log(doc.id, ' => ', doc.data());
+                    let nombre = doc.data().name;
+                    let nombreMascota = doc.data().namePet;
+                    let cc = doc.data().cc
+                    alert(`nombre ${nombre}; cc ${cc}; nombre de mascota ${nombreMascota}`);
                 })
             }
     }
